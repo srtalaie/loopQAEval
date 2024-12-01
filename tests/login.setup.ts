@@ -1,11 +1,13 @@
-import { chromium, expect, test } from "@playwright/test"
+import { chromium, expect, test as setup } from "@playwright/test";
 
 const creds = {
-  email: "ben+pose@workwithloop.com",
-  password: "Password123",
+  email: process.env.EMAIL as string,
+  password: process.env.PASSWORD as string,
 }
 
-test("Login", async () => {
+const authFile = 'playwright/.auth/user.json';
+
+setup("Login", async () => {
   const browser = await chromium.launch()
   const context = await browser.newContext()
   const page = await context.newPage()
@@ -26,6 +28,8 @@ test("Login", async () => {
 
   await password_input.fill(creds.password)
   await login_button.click()
-
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Home")
+  
+  await expect(page).toHaveTitle("Home - Asana", { timeout: 10000 })
+  
+  await page.context().storageState({ path: authFile });
 })

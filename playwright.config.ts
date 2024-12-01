@@ -1,3 +1,4 @@
+require('dotenv').config()
 import { defineConfig, devices } from '@playwright/test';
 
 /**
@@ -34,6 +35,18 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    {
+      name: 'setup',
+      testMatch: '**/*.setup.ts',
+    },
+    {
+      name: 'e2e tests Projects and Workflows',
+      testMatch: '**/*.spec.ts',
+      use: {
+        storageState: 'playwright/.auth/user.json'
+      },
+      dependencies: ['setup'],
+    },
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
