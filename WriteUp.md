@@ -27,7 +27,7 @@ Thus the solution is:
 
 ## Results:
 
-All tests pass. See test report after running `npm test` in command line. After tests run, run command `npx playwright sho-report` in a new command line or ctrl+click `npx playwright sho-report` in the command line.
+All tests pass. See test report after running `npm test` in command line. After tests run, run command `npx playwright show-report` in a new command line or ctrl+click `npx playwright show-report` in the command line.
 
 ## Recommendations:
 
