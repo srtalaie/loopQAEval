@@ -20,7 +20,10 @@ Log into the app > Navigating to a specific Project > Verify a Task is in a spec
 
 The overall challenge for this project will be to minimize code repetition. Because each test contains the same steps the challenge will be to create functions/helpers that perform the same tests on different provided parameters and to leverage Playwright's functionalities that allow for global setups.
 
-Thus the solution is: - To use a setup project to handle logging into the app and save the session in the setup so each subsequent test project that uses setup as a dependency can use that saved session - Create helper functions to navigate to a project based on the project name that is a string passed to the function - Create a helper function that verifies tag existent based on a locator provided as well as an array of tag names to test against
+Thus the solution is:
+
+- To use a setup project to handle logging into the app and save the session in the setup so each subsequent test project that uses setup as a dependency can use that saved session - Create helper functions to navigate to a project based on the project name that is a string passed to the function
+- Create a helper function that verifies tag existent based on a locator provided as well as an array of tag names to test against
 
 ## Results:
 
