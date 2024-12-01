@@ -4,11 +4,11 @@ The task is to create a suite of tests that test functionality within the Asana 
 
 ## Implementation Details:
 
-# The solution for this should be fairly simple. Each test contains the same basic setup of:
+The solution for this should be fairly simple. Each test contains the same basic setup of:
 
 Log into the app > Navigating to a specific Project > Verify a Task is in a specific Swim Lane > Verify that Task has specific tags
 
-# The project is set up as the following:
+The project is set up as the following:
 
 - A login test that is used as a setup for all other tests. The setup tests the login functionality and afterwards saves the session. Each test then will utilize this saved session.
 - Separate spec files for "Cross-functional project plan, Project" & "Work Requests" projects
