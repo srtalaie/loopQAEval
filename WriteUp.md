@@ -33,3 +33,4 @@ All tests pass. See test report after running `npm test` in command line. After 
 
 The logging in functionality can be flaky. Sometimes the assertion that the page title is "Home - Asana" runs before the page fully loads causing a false negative.
 It would be nice to combine the two spec files that contain the tests for the projects: "Cross-functional project plan, Project" & "Work Requests". The blocker for this was trying to figure out a way to run two separate beforeEach blocks in the same spec file. With some research this should be able to be achieved.
+To continue with the DRY principle throughout the project should extract the logic that is there testing each card and create a function to handle that functionality.
