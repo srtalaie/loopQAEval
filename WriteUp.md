@@ -10,11 +10,11 @@ Log into the app > Navigating to a specific Project > Verify a Task is in a spec
 
 # The project is set up as the following:
 
-    - A login test that is used as a setup for all other tests. The setup tests the login functionality and afterwards saves the session. Each test then will utilize this saved session.
-    - Separate spec files for "Cross-functional project plan, Project" & "Work Requests" projects
-      - Each spec file will then have:
-        - A beforeEach block to navigate to [Asana](https://app.asana.com/) then select the project name provided to navigate to the project page
-        - Tests that test that a task is in the designated swim lane and contains the correct tags
+- A login test that is used as a setup for all other tests. The setup tests the login functionality and afterwards saves the session. Each test then will utilize this saved session.
+- Separate spec files for "Cross-functional project plan, Project" & "Work Requests" projects
+  - Each spec file will then have:
+    - A beforeEach block to navigate to [Asana](https://app.asana.com/) then select the project name provided to navigate to the project page
+    - Tests that test that a task is in the designated swim lane and contains the correct tags
 
 ## Challenges and Solutions
 
